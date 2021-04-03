@@ -9,4 +9,6 @@ document.querySelector('form').addEventListener('submit', (e) => {
     } else {
         header.innerHTML = 'invalid email';
     }
-})
+});
+
+// window.stuffLoaded = true;
