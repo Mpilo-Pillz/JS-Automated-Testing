@@ -19,3 +19,7 @@ describe("List of Commands to test effectivly", () => {
       .debug(); // checks for the second (might click the 3rd) item on the search and gets  it add to card button
   });
 });
+
+Object.keys(args).forEach((key) => {
+  cy.get(objectName[key]).clear().type(args[key]);
+});
