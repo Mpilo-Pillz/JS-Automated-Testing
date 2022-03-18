@@ -1,6 +1,6 @@
 const sourceWord =
-    `Simply Easy Learning!
-With Sfiso
+    `It is tough when it is not easy.
+It is difficult when it is hard
 `
 let destination;
 
@@ -15,3 +15,5 @@ const copy = (source, destination) => destination = writeCharacter(readChar(sour
 destination = copy(sourceWord, destination)
 
 console.log(`The sentence copied before a new line is is: ${destination}`)
+
+module.exports = { getFirstLine, readChar, writeCharacter, copy };
