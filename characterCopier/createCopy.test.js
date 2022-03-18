@@ -1,4 +1,4 @@
-const {
+let {
     getFirstLine,
     readChar,
     writeCharacter,
@@ -9,10 +9,13 @@ const phrase = "Always bet on JavaScript. Well TypeScript";
 const multilinePhrase = `Any application that can be written in JavaScript will be.
     Then migrated to TypeScript.
 `;
+let destination = '';
 
 describe("Test the main function mocking out the other ones.", () => {
-    test("Copies text from source over to a destination", () => {
-
+    copy = jest.fn();
+    test("Call copy function", () => {
+        copy(multilinePhrase, destination);
+        expect(copy).toHaveBeenCalledWith(multilinePhrase, destination);
     })
 });
 
