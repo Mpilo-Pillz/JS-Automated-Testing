@@ -12,6 +12,18 @@ fs.writeFile('input.txt', 'Simply Easy Learning!', function (err) {
         if (err) {
             return console.error(err);
         }
+        console.log("Data-->", data.toString().split());
         console.log("Asynchronous read: " + data.toString());
     });
+});
+
+var readable = fs.createReadStream("input.txt", {
+    encoding: 'utf8',
+    fd: null,
+});
+readable.on('readable', function () {
+    var chunk;
+    while (null !== (chunk = readable.read(1) /* here */)) {
+        console.log(chunk); // chunk is one byte
+    }
 });
